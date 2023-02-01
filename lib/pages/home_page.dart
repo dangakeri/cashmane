@@ -27,9 +27,10 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       'J',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
+                        fontFamily: 'Gordita',
                       ),
                     ),
                   ),
@@ -45,6 +46,7 @@ class HomePage extends StatelessWidget {
                         color: Colors.black,
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
+                        fontFamily: 'Gordita',
                       ),
                     ),
                     Text(
@@ -52,7 +54,9 @@ class HomePage extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 16,
-                        fontWeight: FontWeight.w500,
+                        // fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Gordita',
                       ),
                     ),
                   ],
@@ -63,13 +67,14 @@ class HomePage extends StatelessWidget {
             const CardWidget(),
             SizedBox(height: MediaQuery.of(context).size.height * .02),
             Row(
-              children: [
+              children: const [
                 Text(
                   'For you',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
+                    fontFamily: 'Gordita',
                   ),
                 ),
               ],
@@ -171,6 +176,7 @@ class HomePage extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 19,
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'Gordita',
                       ),
                     ),
                     SizedBox(height: MediaQuery.of(context).size.height * .02),
@@ -180,6 +186,7 @@ class HomePage extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
+                        fontFamily: 'Gordita',
                       ),
                     ),
                     SizedBox(height: MediaQuery.of(context).size.height * .02),
@@ -189,10 +196,21 @@ class HomePage extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
+                        fontFamily: 'Gordita',
                       ),
                     ),
                   ],
                 ),
+              ),
+            ),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            const Text(
+              'Withdrawals',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                fontFamily: 'Gordita',
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * .02),
@@ -229,15 +247,16 @@ class CardWidget extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       'Cashmane Account',
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'Gordita',
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Container(
                       height: 40,
                       width: 85,
@@ -245,43 +264,16 @@ class CardWidget extends StatelessWidget {
                           border: Border.all(
                               style: BorderStyle.solid, color: Colors.white),
                           borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return CupertinoAlertDialog(
-                                      title: const Text('Transfer Cash'),
-                                      actions: [
-                                        TextButton(
-                                            onPressed: () {},
-                                            child: const Text('Cancel')),
-                                        TextButton(
-                                            onPressed: () {},
-                                            child: const Text('Ok'))
-                                      ],
-                                    );
-                                  });
-                            },
-                            child: Container(
-                              margin: const EdgeInsets.symmetric(horizontal: 5),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.white),
-                              child: const Icon(
-                                Icons.add,
-                                color: Colors.blue,
-                              ),
-                            ),
-                          ),
-                          const Text(
-                            'Top-Up',
-                            style: TextStyle(color: Colors.white),
-                          )
-                        ],
-                      ),
+                      child: const Center(
+                          child: Text(
+                        'Top-Up',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w300,
+                          fontFamily: 'Gordita',
+                        ),
+                      )),
                     ),
                   ],
                 ),
@@ -291,47 +283,57 @@ class CardWidget extends StatelessWidget {
                     fontSize: 14,
                     color: Colors.white,
                     fontWeight: FontWeight.w300,
+                    fontFamily: 'Gordita',
                   ),
                 ),
                 const Text(
                   '\$15,000',
                   style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontFamily: 'Gordita',
+                  ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 const Text(
                   'Daily Profit',
                   style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300,
-                      color: Colors.white),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                    fontFamily: 'Gordita',
+                  ),
                 ),
                 const Text(
                   '13%',
                   style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontFamily: 'Gordita',
+                  ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
               ],
             ),
-            Text(
+            const Text(
               'Wallet number',
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,
                 fontWeight: FontWeight.w300,
+                fontFamily: 'Gordita',
               ),
             ),
             const Text(
               '1251 **** **** 4895',
               style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
+                fontSize: 16,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Gordita',
+              ),
             ),
             const Spacer(),
             const SizedBox(
@@ -410,6 +412,7 @@ class TilesWidget extends StatelessWidget {
               color: Colors.black,
               fontSize: 16,
               fontWeight: FontWeight.w400,
+              fontFamily: 'Gordita',
             ),
           ),
           subtitle: const Text(
@@ -418,6 +421,7 @@ class TilesWidget extends StatelessWidget {
               color: Colors.black,
               fontSize: 14,
               fontWeight: FontWeight.w400,
+              fontFamily: 'Gordita',
             ),
           ),
           trailing: Column(
@@ -430,6 +434,7 @@ class TilesWidget extends StatelessWidget {
                   color: Colors.green,
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
+                  fontFamily: 'Gordita',
                 ),
               ),
               const Text(
@@ -438,22 +443,11 @@ class TilesWidget extends StatelessWidget {
                   color: Colors.green,
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
+                  fontFamily: 'Gordita',
                 ),
               ),
             ],
           ),
         ));
   }
-}
-
-class AppColors {
-  static final Color blue = const Color(0xFF027c90);
-  static final Color background = const Color(0xFF070707);
-  static final Color background1 = Color(0xFF0B132B);
-  // static final Color silverChalice = const Color(0xFFabada9);
-  // static final Color Gainsboro = const Color(0xFFdaddd8);
-  // static final Color platinum = const Color(0xFFe3e4de);
-  // static final Color alibaster = const Color(0xFFecebe4);
-  // static final Color cultured = const Color(0xFFeef0f2);
-  // static final Color ghostWhite = const Color(0xFFfafaff);
 }
